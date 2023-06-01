@@ -9,22 +9,34 @@
     <title>Bike Trail Tirol Beispiel</title>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Leaflet -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 
     <!-- Leaflet Providers -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.13.0/leaflet-providers.min.js" integrity="sha512-5EYsvqNbFZ8HX60keFbe56Wr0Mq5J1RrA0KdVcfGDhnjnzIRsDrT/S3cxdzpVN2NGxAB9omgqnlh4/06TvWCMw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.13.0/leaflet-providers.min.js"
+        integrity="sha512-5EYsvqNbFZ8HX60keFbe56Wr0Mq5J1RrA0KdVcfGDhnjnzIRsDrT/S3cxdzpVN2NGxAB9omgqnlh4/06TvWCMw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Leaflet FullScreen -->
     <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
+        rel='stylesheet' />
 
     <!-- eigene Stile und Hauptskript -->
     <link rel="stylesheet" href="main.css">
     <script defer src="main.js"></script>
+
+    <!-- leaflet-elevation -->
+    <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation/dist/leaflet-elevation.css" />
+    <script src="https://unpkg.com/@raruto/leaflet-elevation/dist/leaflet-elevation.js"></script>
+
 </head>
 
 <body>
@@ -37,26 +49,39 @@
         </header>
         <article>
             <h1><a href=""></a>Etappe 18: Mayrhofen - Lanersbach</h1>
-            <p>Die als mittelschwierig eingestufte Bike Trail Tirol Etappe führt von Mayrhofen in den hintersten Teil des Zillertals nach Lanersbach. Auf asphaltierten Wegen und gut ausgebauten Forststraßen sind auf einer Streckenlänge von 15 Kilometern 900 Höhenmeter zu bewältigen. Am Ziel, auf 1.280 Metern Seehöhe, wartet das Traumpanorama der Tuxer Alpen.</p>
+            <p>Die als mittelschwierig eingestufte Bike Trail Tirol Etappe führt von Mayrhofen in den hintersten Teil
+                des Zillertals nach Lanersbach. Auf asphaltierten Wegen und gut ausgebauten Forststraßen sind auf einer
+                Streckenlänge von 15 Kilometern 900 Höhenmeter zu bewältigen. Am Ziel, auf 1.280 Metern Seehöhe, wartet
+                das Traumpanorama der Tuxer Alpen.</p>
 
             <div id="map"></div>
 
             <h3>Streckenbeschreibung</h3>
-            <p>Vom Musikpavillon in Mayrhofen fährt man rund 100 Meter in westlicher Richtung und zweigt dann links ab in die Hauptstraße des Zentrums. 
-                Nach etwa einem halben Kilometer überquert man den Bach und fährt halbrechts in die Tuxerstraße bis zur Bundesstraße. Nun folgt man den 
-                Straßenschildern Richtung Ginzling, bis rechts ein schmaler Asphaltweg nach „Finkenberg Tux“ abzweigt. Auf diesem geht es nun aufwärts bis nach 
-                Finkenberg, bis man wieder die Hauptstraße nach Tux erreicht. Auf dieser geht es in zwei Kehren bergwärts ehe man rechts Richtung Astegg abzweigt. 
-                Die Strecke führt nun einen knappen Kilometer ansteigend aber talauswärts bis zur Pension Gletscherblick, wo man scharf links („Mittelstation“) 
-                abzweigt. In weiterer Folge hält man sich an die Wegweiser „Lanersbach“. Es geht ansteigend bis auf 1.500 Metern Seehöhe (kurze Schiebestrecke durch 
+            <p>Vom Musikpavillon in Mayrhofen fährt man rund 100 Meter in westlicher Richtung und zweigt dann links ab
+                in die Hauptstraße des Zentrums.
+                Nach etwa einem halben Kilometer überquert man den Bach und fährt halbrechts in die Tuxerstraße bis zur
+                Bundesstraße. Nun folgt man den
+                Straßenschildern Richtung Ginzling, bis rechts ein schmaler Asphaltweg nach „Finkenberg Tux“ abzweigt.
+                Auf diesem geht es nun aufwärts bis nach
+                Finkenberg, bis man wieder die Hauptstraße nach Tux erreicht. Auf dieser geht es in zwei Kehren
+                bergwärts ehe man rechts Richtung Astegg abzweigt.
+                Die Strecke führt nun einen knappen Kilometer ansteigend aber talauswärts bis zur Pension
+                Gletscherblick, wo man scharf links („Mittelstation“)
+                abzweigt. In weiterer Folge hält man sich an die Wegweiser „Lanersbach“. Es geht ansteigend bis auf
+                1.500 Metern Seehöhe (kurze Schiebestrecke durch
                 die Wiesen, 28a) und danach auf Forststraßen abwärts bis nach Vorderlanersbach.</p>
 
         </article>
         <footer>
             <strong>Datenquellen:</strong>
             <nav>
-                <a href="https://www.tirol.at/reisefuehrer/sport/mountainbiken/bike-trail-tirol">Bike Trail Tirol (Online Reiseführer Tirol)</a> |
-                <a href="https://www.tirol.at/reisefuehrer/sport/radfahren/biketouren/a-bike-trail-tirol-mayrhofen-lanersbach">Etappe 18: Mayrhofen - Lanersbach</a> |
-                <a href="https://www.data.gv.at/katalog/de/dataset/land-tirol_elektronischekartetirol">eGrundkarte Tirol</a>
+                <a href="https://www.tirol.at/reisefuehrer/sport/mountainbiken/bike-trail-tirol">Bike Trail Tirol
+                    (Online Reiseführer Tirol)</a> |
+                <a
+                    href="https://www.tirol.at/reisefuehrer/sport/radfahren/biketouren/a-bike-trail-tirol-mayrhofen-lanersbach">Etappe
+                    18: Mayrhofen - Lanersbach</a> |
+                <a href="https://www.data.gv.at/katalog/de/dataset/land-tirol_elektronischekartetirol">eGrundkarte
+                    Tirol</a>
             </nav>
         </footer>
     </main>
