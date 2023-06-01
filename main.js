@@ -67,3 +67,6 @@ let controlElevation = L.control.elevation({
 
 }).addTo(map);
 controlElevation.load("data/etappe18.gpx");
+
+console.log(ETAPPEN)
+
