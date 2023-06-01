@@ -49,7 +49,8 @@ let layerControl = L.control.layers({
         eGrundkarteTirol.ortho,
         eGrundkarteTirol.nomenklatur,
     ])
-}, {
+}, 
+{
     "Route der Etappe": themaLayer.route.addTo(map)
 }).addTo(map);
 
@@ -73,7 +74,18 @@ console.log(ETAPPEN);
 //Pulldown für Navigation
 let pulldown = document.querySelector("#pulldown")
 for (let etappe of ETAPPEN){
-    console.log(etappe);
-    pulldown.innerHTML += `<option value="${etappe.user}">Etappe ${etappe.nr}: ${etappe.etappe}</option>`
+    let status = "";
+    if (etappe.nr == "7"){
+        status="selected";
+    }
+    pulldown.innerHTML += `<option ${status} value="${etappe.user}">Etappe ${etappe.nr}: ${etappe.etappe}</option>`
+}
+
+// auf Änderungen im Pulldown reagieren
+pulldown.onchange = function(evt){
+    //console.log(pulldown.value);
+    let url = `https://${pulldown.value}.github.io/bike.tirol`;
+    //console.log(url);
+    window.location.href = url;
 }
 
